@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f8;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .form-box {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        .option {
+            margin-top: 8px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            background-color: #007bff;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .reset-btn {
+            background-color: #dc3545;
+        }
+
+        .reset-btn:hover {
+            background-color: #a71d2a;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .login-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="form-box">
+        <h2>Registration Form</h2>
+
+        <<form action="/register" method="POST">
+
+            <!-- Text Input -->
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname"
+                   placeholder="Enter your full name" required>
+
+            <!-- Email Input -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email" required>
+
+            <!-- Password Input -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"
+                   placeholder="Create a password" required>
+
+            <!-- Radio Buttons -->
+            <label>Gender:</label>
+            <div class="option">
+                <input type="radio" id="male" name="gender"
+                       value="Male" required>
+                <label for="male" style="display:inline;">Male</label>
+
+                <input type="radio" id="female" name="gender"
+                       value="Female">
+                <label for="female" style="display:inline;">Female</label>
+
+                <input type="radio" id="other" name="gender"
+                       value="Other">
+                <label for="other" style="display:inline;">Other</label>
+            </div>
+
+            <!-- Checkboxes -->
+            <label>Hobbies:</label>
+            <div class="option">
+                <input type="checkbox" id="reading" name="hobbies[]"
+                       value="Reading">
+                <label for="reading" style="display:inline;">Reading</label>
+
+                <input type="checkbox" id="sports" name="hobbies[]"
+                       value="Sports">
+                <label for="sports" style="display:inline;">Sports</label>
+
+                <input type="checkbox" id="music" name="hobbies[]"
+                       value="Music">
+                <label for="music" style="display:inline;">Music</label>
+            </div>
+
+            <!-- Dropdown Menu -->
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="">Select your country</option>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+            </select>
+
+            <!-- Date Input -->
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <!-- Telephone Input -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="Enter your phone number" required>
+
+            <!-- Textarea -->
+            <label for="address">Address:</label>
+            <textarea id="address" name="address"
+                      rows="4" placeholder="Enter your address"></textarea>
+
+            <!-- Terms and Conditions -->
+            <div class="option">
+                <input type="checkbox" id="terms" name="terms"
+                       value="Accepted" required>
+                <label for="terms" style="display:inline;">
+                    I agree to the Terms and Conditions
+                </label>
+            </div>
+
+            <!-- Submit and Reset Buttons -->
+            <button type="submit">Register</button>
+            <button type="reset" class="reset-btn">Reset</button>
+
+        </form>
+
+        <div class="login-link">
+            Already have an account?
+            <a href="index.html">Login Here</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
